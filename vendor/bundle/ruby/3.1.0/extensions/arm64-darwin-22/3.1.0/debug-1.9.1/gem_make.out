@@ -1,0 +1,21 @@
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/debug-1.9.1/ext/debug
+/Users/kokuboriki/.rbenv/versions/3.1.3/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/debug-1.9.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240217-66814-k5vyps sitelibdir\=./.gem.20240217-66814-k5vyps clean
+
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/debug-1.9.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240217-66814-k5vyps sitelibdir\=./.gem.20240217-66814-k5vyps
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+ld: warning: -multiply_defined is obsolete
+ld: warning: ignoring duplicate libraries: '-lruby.3.1'
+
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/debug-1.9.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240217-66814-k5vyps sitelibdir\=./.gem.20240217-66814-k5vyps install
+/usr/bin/install -c -m 0755 debug.bundle ./.gem.20240217-66814-k5vyps/debug
+
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/debug-1.9.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240217-66814-k5vyps sitelibdir\=./.gem.20240217-66814-k5vyps clean

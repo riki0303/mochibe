@@ -1,0 +1,16 @@
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/json-2.7.1/ext/json
+/Users/kokuboriki/.rbenv/versions/3.1.3/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240217-87927-t7ellk sitelibdir\=./.gem.20240217-87927-t7ellk clean
+
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240217-87927-t7ellk sitelibdir\=./.gem.20240217-87927-t7ellk
+make: Nothing to be done for `all'.
+
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240217-87927-t7ellk sitelibdir\=./.gem.20240217-87927-t7ellk install
+
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240217-87927-t7ellk sitelibdir\=./.gem.20240217-87927-t7ellk clean

@@ -1,0 +1,24 @@
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.18.3/ext/bootsnap
+/Users/kokuboriki/.rbenv/versions/3.1.3/bin/ruby extconf.rb
+checking for fdatasync() in unistd.h... yes
+checking for whether -D_GNU_SOURCE is accepted as CPPFLAGS... yes
+checking for whether -O3 is accepted as CFLAGS... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.18.3/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240217-13380-5kqs91 sitelibdir\=./.gem.20240217-13380-5kqs91 clean
+
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.18.3/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240217-13380-5kqs91 sitelibdir\=./.gem.20240217-13380-5kqs91
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+ld: warning: -multiply_defined is obsolete
+ld: warning: ignoring duplicate libraries: '-lruby.3.1'
+
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.18.3/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240217-13380-5kqs91 sitelibdir\=./.gem.20240217-13380-5kqs91 install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20240217-13380-5kqs91/bootsnap
+
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.18.3/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240217-13380-5kqs91 sitelibdir\=./.gem.20240217-13380-5kqs91 clean
