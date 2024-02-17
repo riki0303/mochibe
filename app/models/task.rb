@@ -16,5 +16,5 @@
 #  index_tasks_on_user_id  (user_id)
 #
 class Task < ApplicationRecord
-  
+  belongs_to :user
 end
