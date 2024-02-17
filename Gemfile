@@ -36,6 +36,7 @@ group :development, :test do
   gem 'net-http'
   gem 'pry-byebug'
   gem 'erb2haml'
+  gem 'rubocop-rails'
 end
 
 group :development do
