@@ -1,0 +1,20 @@
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/stringio-3.1.0/ext/stringio
+/Users/kokuboriki/.rbenv/versions/3.1.3/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/stringio-3.1.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20240217-66814-msg6vc sitelibdir\=./.gem.20240217-66814-msg6vc clean
+
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/stringio-3.1.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20240217-66814-msg6vc sitelibdir\=./.gem.20240217-66814-msg6vc
+compiling stringio.c
+linking shared-object stringio.bundle
+ld: warning: -multiply_defined is obsolete
+ld: warning: ignoring duplicate libraries: '-lruby.3.1'
+
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/stringio-3.1.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20240217-66814-msg6vc sitelibdir\=./.gem.20240217-66814-msg6vc install
+/usr/bin/install -c -m 0755 stringio.bundle ./.gem.20240217-66814-msg6vc
+
+current directory: /Users/kokuboriki/mochibe/vendor/bundle/ruby/3.1.0/gems/stringio-3.1.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20240217-66814-msg6vc sitelibdir\=./.gem.20240217-66814-msg6vc clean
