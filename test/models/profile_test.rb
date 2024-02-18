@@ -1,23 +1,21 @@
 # == Schema Information
 #
-# Table name: tasks
+# Table name: profiles
 #
 #  id         :bigint           not null, primary key
-#  date       :date             not null
-#  memo       :text
-#  time       :float            not null
-#  title      :string           not null
+#  bio        :text
+#  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  user_id    :bigint           not null
 #
 # Indexes
 #
-#  index_tasks_on_user_id  (user_id)
+#  index_profiles_on_user_id  (user_id)
 #
 require 'test_helper'
 
-class TaskTest < ActiveSupport::TestCase
+class ProfileTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
