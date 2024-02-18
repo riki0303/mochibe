@@ -26,9 +26,9 @@ ActiveRecord::Schema.define(version: 2024_02_18_073445) do
 
   create_table "tasks", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.text "title"
-    t.float "time"
-    t.date "date"
+    t.string "title", null: false
+    t.float "time", null: false
+    t.date "date", null: false
     t.text "memo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
