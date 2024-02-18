@@ -19,6 +19,19 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit
+    @task = current_user.tasks.find(params[:id])
+  end
+  def update
+    @task = current_user.tasks.find(params[:id])
+    if @task.update(task_params)
+      redirect_to tasks_path, notice: '更新出来ました'
+    else
+      flash.now[:alert] = '更新出来ませんでした'
+      render :edit
+    end
+  end
+
   private
 
   def task_params
