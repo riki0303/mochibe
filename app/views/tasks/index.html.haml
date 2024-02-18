@@ -1,0 +1,6 @@
+- @tasks.each do |task|
+  %p= task.title
+  %p= task.date
+  %p= task.time
+  - if task.memo.present?
+    %p= task.title
