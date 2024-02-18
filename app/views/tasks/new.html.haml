@@ -1,0 +1,6 @@
+= form_with(model: @task, local: true) do |f|
+  = f.text_field :title, autofocus: true, placeholder: '内容'
+  = f.date_field :date, value: Time.now.strftime("%Y-%m-%d")
+  = f.number_field :time, in: 0..1440, step: 1, placeholder: '分'
+  = f.text_area :memo,  placeholder: 'メモ'
+  = f.submit "記録"
