@@ -22,6 +22,7 @@ class TasksController < ApplicationController
   def edit
     @task = current_user.tasks.find(params[:id])
   end
+
   def update
     @task = current_user.tasks.find(params[:id])
     if @task.update(task_params)
@@ -30,6 +31,13 @@ class TasksController < ApplicationController
       flash.now[:alert] = '更新出来ませんでした'
       render :edit
     end
+  end
+
+  def destroy
+    @task = current_user.tasks.find(params[:id])
+    @task.destroy
+
+    redirect_to tasks_path, notice: '削除出来ました'
   end
 
   private
