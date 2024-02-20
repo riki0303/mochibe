@@ -23,4 +23,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :tasks, dependent: :destroy
+  has_one :profile, dependent: :destroy
 end
