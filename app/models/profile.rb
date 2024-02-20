@@ -14,4 +14,9 @@
 #  index_profiles_on_user_id  (user_id)
 #
 class Profile < ApplicationRecord
+  belongs_to :user
+  has_one_attached :avatar
+
+  validates :name, length: { maximum: 20 }
+  validates :bio, length: { maximum: 50 }
 end
