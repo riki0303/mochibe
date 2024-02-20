@@ -1,0 +1,4 @@
+= form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f|
+  = f.text_field :name, autofocus: true, placeholder: '名前', class: 'form__field'
+  = f.text_area :bio, placeholder: '自己紹介', class: 'form__field'
+  = f.submit "更新する"
