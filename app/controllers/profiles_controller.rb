@@ -8,17 +8,20 @@ class ProfilesController < ApplicationController
   end
 
   def edit
-    if current_user.profile.nil?
-      current_user.build_profile
+    if current_user.profile
+      @profile = current_user.profile
+    else
+      @profile = current_user.build_profile
     end
-    @profile = current_user.profile
   end
 
   def update
-    if current_user.profile.nil?
-      current_user.build_profile
+    if current_user.profile
+      @profile = current_user.profile
+    else
+      @profile = current_user.build_profile
     end
-    @profile = current_user.profile
+
     if @profile.update(profile_params)
       redirect_to profile_path, notice: '更新出来ました'
     else
