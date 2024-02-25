@@ -5,6 +5,7 @@ class ProfilesController < ApplicationController
     if current_user.profile
       @profile = current_user.profile
     end
+    @task = current_user.tasks
   end
 
   def edit
