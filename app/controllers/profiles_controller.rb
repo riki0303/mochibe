@@ -11,14 +11,14 @@ class ProfilesController < ApplicationController
     end_date = Date.current
     start_date = 6.day.ago.to_date
     week = (start_date..end_date).to_a
-    task_data = Task.where(date: start_date..end_date).pluck(:date, :time)
+    task_data = current_user.tasks.where(date: start_date..end_date).pluck(:date, :time)
 
     # 勉強時間がない日も日付を追加
     new_data = []
     week.each do |date|
-      date_exist? = task_data.find { |entry| entry[0] == date }
-      if date_exist?
-        new_data << date_exist?
+      date_exist = task_data.find { |entry| entry[0] == date }
+      if date_exist
+        new_data << date_exist
       else
         new_data << [date, 0.0]
       end
