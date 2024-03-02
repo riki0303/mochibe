@@ -17,7 +17,7 @@ import $, { data } from 'jquery';
 // const imagePath = (name) => images(name, true)
 import Chart from 'chart.js/auto';
 
-document.addEventListener('turbolinks:load', () => {
+$(document).on('turbolinks:load', function () {
   (async function () {
     // gonで設定したデータを使用(profiles_contorller.rb)
     const taskData = gon.task_data;
@@ -28,7 +28,7 @@ document.addEventListener('turbolinks:load', () => {
         labels: taskData.map((row) => row.date),
         datasets: [
           {
-            label: '学習時間',
+            label: '学習時間(分)',
             data: taskData.map((row) => row.time),
           },
         ],
