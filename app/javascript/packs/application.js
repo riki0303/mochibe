@@ -19,24 +19,17 @@ import Chart from 'chart.js/auto';
 
 document.addEventListener('turbolinks:load', () => {
   (async function () {
-    const data = [
-      { year: 2010, count: 10 },
-      { year: 2011, count: 20 },
-      { year: 2012, count: 15 },
-      { year: 2013, count: 25 },
-      { year: 2014, count: 22 },
-      { year: 2015, count: 30 },
-      { year: 2016, count: 28 },
-    ];
+    // gonで設定したデータを使用(profiles_contorller.rb)
+    const taskData = gon.task_data;
 
     new Chart(document.getElementById('acquisitions'), {
       type: 'bar',
       data: {
-        labels: data.map((row) => row.year),
+        labels: taskData.map((row) => row.date),
         datasets: [
           {
             label: '学習時間',
-            data: data.map((row) => row.count),
+            data: taskData.map((row) => row.time),
           },
         ],
       },
