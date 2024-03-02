@@ -6,6 +6,34 @@ class ProfilesController < ApplicationController
       @profile = current_user.profile
     end
     @task = current_user.tasks
+
+    # 下記グラフの為のロジック
+    end_date = Date.current
+    start_date = 6.day.ago.to_date
+    week = (start_date..end_date).to_a
+    task_data = Task.where(date: start_date..end_date).pluck(:date, :time)
+
+    # 勉強時間がない日も日付を追加
+    new_data = []
+    week.each do |date|
+      date_exist? = task_data.find { |entry| entry[0] == date }
+      if date_exist?
+        new_data << date_exist?
+      else
+        new_data << [date, 0.0]
+      end
+    end
+
+    # 配列→ハッシュへ（jsで処理が分かりやすい為）
+    task_data = new_data.map do |item|
+      {
+        date: item[0],  # 1つ目の要素をdateとして取得
+        time: item[1],  # 2つ目の要素をtimeとして取得
+      }
+    end
+    @task_data = task_data.sort_by { |item| item[:date] }
+
+    gon.task_data = @task_data
   end
 
   def edit
