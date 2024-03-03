@@ -5,9 +5,11 @@
     %title Mochibe
     = csrf_meta_tags
     = csp_meta_tag
+    = stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload"
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %p.notice= notice
-    %p.alert= alert
+    - if flash.present?
+      - flash.each do |key, value|
+        %div{:class => key}= value
     = yield

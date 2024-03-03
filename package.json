@@ -13,6 +13,7 @@
   "version": "0.1.0",
   "devDependencies": {
     "@webpack-cli/serve": "^2.0.5",
+    "daisyui": "^4.7.2",
     "webpack-dev-server": "^5.0.2"
   }
 }
