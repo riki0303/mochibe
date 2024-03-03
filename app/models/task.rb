@@ -21,4 +21,9 @@ class Task < ApplicationRecord
   validates :title, presence: true, length: { maximum: 30 }
   validates :time, presence: true
   validates :date, presence: true
+
+  scope :today, -> { where(date: Date.today) }
+  scope :week, -> { where(date: 1.week.ago.beginning_of_day..Date.today.end_of_day) }
+  scope :month, -> { where(date: 30.week.ago.beginning_of_day..Date.today.end_of_day) }
+
 end
