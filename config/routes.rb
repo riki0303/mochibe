@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   resources :tasks
   resource :profile, only: %i[show edit update]
+  resource :homes, only: %i[show]
 end
