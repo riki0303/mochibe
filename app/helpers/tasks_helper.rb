@@ -1,6 +1,7 @@
 module TasksHelper
 
   def task_time_today
+
     tasks_today = @task.today.sum(:time)
   end
 
