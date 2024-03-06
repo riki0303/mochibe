@@ -1,0 +1,14 @@
+= Gon::Base.render_data
+
+= @profile.name
+= @profile.bio
+= image_tag @profile.avatar, size: "200x200"
+= "今日は#{task_time_today}分勉強しました"
+= "今週は#{task_time_week}分勉強しました"
+= "今月は#{task_time_month}分勉強しました"
+= "今まで#{task_time_all}分勉強しました"
+
+%div{style: "width: 800px;"}
+  %canvas#acquisitions
+
+= javascript_pack_tag 'chart'
