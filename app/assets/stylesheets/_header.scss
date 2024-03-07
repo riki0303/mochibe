@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.header__title {
+  border-bottom: 3px black solid;
+}
+
+.header__content {
+  display: flex;
+  gap: 20px;
+}
+
+.header__link {
+  background-color: #67cb1b;
+  color: white;
+  padding: 7px 12px;
+  border-radius: 6px;
+}
