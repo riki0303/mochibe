@@ -1,11 +1,15 @@
 = render 'commons/header'
 
 .container
-  - @tasks.each do |task|
-    = link_to '編集', edit_task_path(task)
-    = link_to '削除', task_path(task), method: :delete, data: { confirm: "本当に削除してもいいですか？" }
-    %p= task.title
-    %p= task.date
-    %p= task.time
-    - if task.memo.present?
-      %p= task.memo
+  .task
+    - @tasks.each do |task|
+      .task__item
+        .task__info
+          %p.task__date= I18n.l(task.date, formmat: :default)
+          %p= "#{task.time}分"
+        %h3.task__title= task.title
+        - if task.memo.present?
+          %p.task__memo= "メモ: #{task.memo}"
+        .task__item__button
+          = link_to '編集', edit_task_path(task), class: 'task__link'
+          = link_to '削除', task_path(task), method: :delete, data: { confirm: "本当に削除してもいいですか？" }, class: 'task__link'
