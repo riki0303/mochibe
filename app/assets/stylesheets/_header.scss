@@ -1,3 +1,6 @@
+@import 'variable';
+@import 'mixin';
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -14,8 +17,5 @@
 }
 
 .header__link {
-  background-color: #67cb1b;
-  color: white;
-  padding: 7px 12px;
-  border-radius: 6px;
+  @include btn-primary;
 }
