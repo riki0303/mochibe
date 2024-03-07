@@ -1,0 +1,6 @@
+%header.header
+  = link_to root_path do
+    %h2.header__title Mochibe
+  .header__content
+    = link_to 'マイページ', profile_path,class: 'header__link'
+    = link_to '記録する', new_task_path,class: 'header__link'

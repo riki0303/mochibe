@@ -1,0 +1,41 @@
+@import 'variable';
+@import 'mixin';
+
+.task {
+  display: grid;
+  gap: 20px;
+}
+
+.task__item {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.task__info {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+}
+.task__date {
+  font-size: 14px;
+}
+.task__memo {
+  margin-top: 15px;
+}
+
+.task__title {
+  font-size: 25px;
+}
+
+.task__item__button {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+.task__link {
+  @include btn-secondly;
+}

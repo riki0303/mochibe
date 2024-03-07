@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+@import 'reset';
+@import 'container';
+@import 'header';
+@import 'task';
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
