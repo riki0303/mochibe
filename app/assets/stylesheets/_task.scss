@@ -4,6 +4,8 @@
 .task {
   display: grid;
   gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .task__item {
@@ -22,11 +24,12 @@
   font-size: 14px;
 }
 .task__memo {
-  margin-top: 15px;
+  font-size: 18px;
 }
 
 .task__title {
   font-size: 25px;
+  margin: 10px 0 10px;
 }
 
 .task__item__button {

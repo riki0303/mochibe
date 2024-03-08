@@ -1,0 +1,28 @@
+@import 'variable';
+@import 'mixin';
+
+.top {
+  text-align: center;
+  padding-top: 100px;
+}
+.top__title {
+  display: inline;
+  border-bottom: 3px black solid;
+}
+
+.top__sub-title {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.top__btn {
+  @include btn-primary;
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.top__link-container {
+  margin-top: 30px;
+}

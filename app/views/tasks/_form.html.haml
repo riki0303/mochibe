@@ -1,0 +1,18 @@
+.container--gray
+  %ul.validation
+  - @task.errors.full_messages.each do |message|
+    %li.validation__item
+      = message
+
+  .form
+    = form_with(model: @task, local: true) do |f|
+      .form__item
+        = f.text_field :title, autofocus: true, placeholder: 'タイトル', class: 'form__field'
+      .form__item
+        = f.date_field :date, value: Time.now.strftime("%Y-%m-%d"), class: 'form__field'
+      .form__item
+        = f.number_field :time, in: 0..1440, step: 1, placeholder: '時間（分）', class: 'form__field'
+      .form__item.form__item--memo
+        = f.text_area :memo,  placeholder: 'メモ', class: 'form__field form__field--memo'
+      %button.form__button
+        = f.submit "記録"

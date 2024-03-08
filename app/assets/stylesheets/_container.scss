@@ -1,6 +1,15 @@
 @import 'variable';
 
 .container {
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 40px;
+  position: relative;
+}
+
+.container--gray {
   background-color: $background-color;
   padding: 20px;
+  min-height: 100vh;
 }
