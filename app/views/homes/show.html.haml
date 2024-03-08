@@ -1,4 +1,7 @@
-%p.text-5xl.text-red-500 Hello World
-
-
-%button.btn.btn-primary Primary
+.top
+  %h1.top__title Mochibe
+  %h2.top__sub-title モチベ維持できてる？
+  .top__link-container
+    = link_to 'ログイン', new_user_session_path, class: 'top__btn'
+    = link_to '登録', new_user_registration_path, class: 'top__btn'
+    

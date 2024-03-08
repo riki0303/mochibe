@@ -11,3 +11,12 @@
   padding: 7px 12px;
   border-radius: 6px;
 }
+@mixin btn-formm {
+  background-color: #494b4b;
+  color: white;
+  padding: 7px 12px;
+  border-radius: 6px;
+  :hover {
+    opacity: 0.7;
+  }
+}
