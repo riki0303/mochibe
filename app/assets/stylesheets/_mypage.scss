@@ -1,0 +1,53 @@
+@import 'variable';
+@import 'mixin';
+
+.mypage {
+  @media screen and(min-width: 1024px) {
+    display: flex;
+  }
+}
+.mypage__item {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.mypage__profile {
+  text-align: center;
+}
+
+.mypage__avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+}
+
+.mypage__name {
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.mypage__link {
+  @include btn-formm;
+  display: inline-block;
+  max-width: 300px;
+  font-size: 14px;
+  padding: 6px 16px;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.mypage__result {
+  @media screen and(max-width: 1023px) {
+    margin-top: 20px;
+  }
+}
+.mypage__result-item {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.mypage__chatrt {
+  margin-top: 30px;
+}

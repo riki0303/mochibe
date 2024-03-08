@@ -2,15 +2,22 @@
 
 = render 'commons/header'
 
-= @profile.name
-= @profile.bio
-= image_tag @profile.avatar, size: "200x200"
-= "今日は#{task_time_today}分勉強しました"
-= "今週は#{task_time_week}分勉強しました"
-= "今月は#{task_time_month}分勉強しました"
-= "今まで#{task_time_all}分勉強しました"
+.container--gray
+  .mypage
+    .mypage__profile.mypage__item
+      = image_tag @profile.avatar, size: "200x200", class:'mypage__avatar'
+      %p.mypage__name= @profile.name
+      %p.mypage__bio= @profile.bio
+      .mypage__link-container
+        = link_to 'プロフィールを編集する', edit_profile_path, class: 'mypage__link'
+    .mypage__result.mypage__item
+      .mypage__result-item
+        %p= "今日:#{task_time_today}分"
+        %p= "週:#{task_time_week}分"
+        %p= "月:#{task_time_month}分"
+        %p= "合計:#{task_time_all}分"
+      .mypage__chatrt
+        %canvas#acquisitions
 
-%div{style: "width: 800px;"}
-  %canvas#acquisitions
 
 = javascript_pack_tag 'chart'
