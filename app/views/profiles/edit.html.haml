@@ -1,5 +1,18 @@
-= form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f|
-  = f.text_field :name, autofocus: true, placeholder: '名前'
-  = f.text_area :bio, placeholder: '自己紹介'
-  = f.file_field :avatar
-  = f.submit "更新する"
+= render 'commons/header'
+
+.container--gray
+  %ul.validation
+  - @profile.errors.full_messages.each do |message|
+    %li.validation__item
+      = message
+
+  .form
+    = form_with(model: @profile, local: true) do |f|
+      .form__item
+        = f.text_field :name, autofocus: true, placeholder: '名前', class: 'form__field'
+      .form__item
+        = f.text_area :bio, placeholder: '自己紹介', class: 'form__field'
+      .form__item
+        = f.file_field :avatar, class: 'form__field'
+      %button.form__button
+        = f.submit "更新"
