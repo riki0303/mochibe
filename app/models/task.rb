@@ -23,6 +23,7 @@ class Task < ApplicationRecord
   validates :date, presence: true
 
   scope :today, -> { where(date: Date.today) }
+  scope :yesterday, -> { where(date: Date.yesterday) }
   scope :week, -> { where(date: 1.week.ago.beginning_of_day..Date.today.end_of_day) }
   scope :month, -> { where(date: 30.week.ago.beginning_of_day..Date.today.end_of_day) }
 
