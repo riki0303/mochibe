@@ -13,6 +13,7 @@
     .mypage__result.mypage__item
       .mypage__result-item
         %p= "今日:#{task_time_today}分"
+        %p= "前日比:#{yesterday_time_change}分"
         %p= "週:#{task_time_week}分"
         %p= "月:#{task_time_month}分"
         %p= "合計:#{task_time_all}分"
